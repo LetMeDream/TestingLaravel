@@ -1,0 +1,10 @@
+.here{
+    position:absolute;
+    left:50%;
+    width:100%;
+    transform: translateX(-50%);
+    z-index:0;
+}
+#openNav{
+    z-index:1;
+}

@@ -1,0 +1,95 @@
+body{
+    overflow-x: hidden;
+}
+.container-fluid{
+    padding:0;
+}
+.content{
+    position:absolute;
+    top: 30%;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%) translateY(-50%);
+}
+#topNav{
+    background-color:gray;
+    height:40px;
+}
+#main{
+    width:100%;
+}
+#openDiv{
+    position:relative;
+    width:100%;
+}
+
+#openNav{
+    position:absolute;
+    cursor: pointer;
+    top:10px;
+    left:20px;
+    transition: .3s;
+}
+#openNav:hover{
+    color:gray;
+}
+#title{
+    position:absolute;
+    top: 20%;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%) translateY(-50%);
+}
+/** Let's add some css */
+.thisNavBar{
+    height:100%; /** full-height */
+    width: 0px; /** will be changed with js */
+    position: fixed; /** so you stay in place */
+    z-index:1; /** To be on top */
+    top:0;
+    left:0px;
+    background-color:#111;
+    overflow-x:hidden; /* Disable horizontal scroll (but also hides anchors tags)*/
+    padding-top:60px;
+    transition: 0.5s;
+
+}
+/** for the anchors inside thisNav */
+.thisNavBar a{
+    padding: 8px 8px 8px 32px;
+    display:block;
+    text-decoration: none;
+    font-size: 20px;
+    color:#818181;
+    transition:0.3s;
+}
+.thisNavBar #welcome{
+    position:absolute;
+    bottom:20px;
+}
+/* When you mouse over the navigation links, change their color */
+.thisNavBar a:hover {
+    color: #f1f1f1;
+}
+
+/** Positioning the X (to close the navBar) */
+.thisNavBar .closebtn{
+    position: absolute;
+    top:0px;
+    right:25px;
+    font-size: 36px;
+    margin-left: 50px; /** I really don't know what this is used for */
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: .5s;
+    /* padding: 20px; */
+}
+
+/** Some responsiveness */
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .thisNavBar {padding-top: 15px;}
+    .thisNavBar a {font-size: 18px;}
+}

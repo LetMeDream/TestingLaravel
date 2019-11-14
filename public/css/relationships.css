@@ -1,0 +1,17 @@
+.content_r{
+    position:absolute;
+    top: 90px;
+    text-align: center;
+    width:80%;
+    left:10%;
+
+}
+.content_r1{
+    position:absolute;
+    width:90%;
+    top: 160px;
+    left: 15%;
+    text-align: left;
+    /* transform: translateX(-50%); */
+    font-size: 14px;
+}
