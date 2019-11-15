@@ -66,6 +66,18 @@ class UserController extends Controller
 
     }
 
+    public function destroy(User $user){ //ROUTE MODEL BINDING
+
+        /* dd($user); */
+        $user->destroy($user->id);
+
+        return redirect('/users');
+
+    }
+
+    /*
+    ** Refactored. This function is used both in Update and in Store.
+    */
     private function requestValidate(){
         return request()->validate([
             'name' => 'required|min:4',

@@ -7,12 +7,14 @@
                                 {{-- <input class='form-control' name='email' placeholder='Email'> --}}
                                 <select name='status' class='form-control'>
                                     <option  disabled>Status</option>
-                                    <option {{ $user->status == 'Active' ? 'selected' : '' }} value='1'>
-                                        Active
-                                    </option>
-                                    <option {{ $user->status == 'Inactive' ? 'selected' : '' }} value='0'>
-                                        Inactive
-                                    </option>
+
+                                    @foreach ($user->getStatus() as $statusKey => $statusValue)
+                                        <option value='{{ $statusKey }}' {{ $statusValue == $user->status ? 'selected' : '' }}>
+                                            {{ $statusValue }}
+                                        </option>
+                                    @endforeach
+
+
                                 </select>
 
                                 <select name='company_id' class='form-control'>

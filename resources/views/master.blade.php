@@ -23,7 +23,7 @@
             <a href="javascript:void(0)" class='closebtn' onclick="closeNav()">&times;</a>
             <a href="{{ route('basic') }}">First things first</a>
             <a href="/users">Relationships Practice</a>
-            <a href="">Empty</a>
+            <a href="/contact">Contact Us</a>
             <a href="{{ route('factory') }}">Model Factory</a>
 
             <a id='welcome' href="{{ route('welcome') }}"> Welcome </a>

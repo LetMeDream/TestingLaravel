@@ -28,6 +28,15 @@
                         </div>
 
                 </div>
+                <div class="row">
+                    <div class="delete">
+                        <form action='/users/{{$user->id}}' method="POST">
+                            @method('DELETE')
+                            @csrf
+                            <button type='submit' class='btn btn-danger'>Delete</button>
+                        </form>
+                    </div>
+                </div>
 
         </div>
 

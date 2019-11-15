@@ -43,16 +43,22 @@ class User extends Authenticatable
 
     }
 
+    /** This is an Accesors; Accesor allow you to format Eloquent Attributes values when retrieve them on model Instances */
     public function getStatusAttribute($attribute){
-
-        return [
-            1 => 'Active',
-            0 => 'Inactive'
-
-        ][$attribute];
-
+        // Here we will do some refactoring.
+        return $this->getStatus()[$attribute];
     }
 
+    public function getStatus(){
+        /** We refactored here.
+         * By creating this function outside of the getStatusAtrribute we can now call it from the view.
+         */
+        return [
+            0 => 'Inactive',
+            1 => 'Active',
+            2 => 'In-progress'
+        ];
+    }
     /** Default value set in order to solve an error */
     protected $attributes = [
         'status' => 1
