@@ -37,6 +37,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+
+    /** Mine down from here */
     public function company(){
 
         return $this->belongsTo(Company::class);

@@ -61,6 +61,18 @@ class TopicsSeeder extends Seeder
             array('name' => 'Mass Assignment',
                 'known' => '1'
             ),
+            array('name' => 'Basic relationships (hasMany <-> BelongsTo)',
+                'known' => '1'
+            ),
+            array('name' => 'Accesors and mutators',
+                'known' => '1'
+            ),
+            array('name' => 'Mailables',
+                'known' => '1'
+            ),
+            array('name' => 'So much more',
+                'known' => '0'
+            )
         ]);
     }
 }
